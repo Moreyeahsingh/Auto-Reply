@@ -1,0 +1,738 @@
+.App {
+
+ 
+}
+body {background-color:black;}
+
+.main-container{
+  width: 100%;
+height: auto;;
+background-color: #000000;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+
+}
+.logo{
+ width: 500px;
+  height: 180px;
+
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+body{
+  margin: 0%;
+  padding: 0;
+}
+.main-body{
+  background: url('http://i.imgur.com/Eor57Ae.jpg') no-repeat fixed center center;
+  background-size: cover;
+  font-family: Montserrat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.button{
+  
+
+
+  
+  width: 160px;
+  height: 60px;
+  margin: 20px;
+  background: #020202;
+  border: 3px solid #FF0000;
+  border-radius: 85px;
+color:red;
+
+  box-shadow: 0px 2px 2px rgba(251, 132, 16, 0.2);
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 800;
+font-size: 25px;
+line-height: 22px;
+ 
+}
+@media screen and (max-width: 579px) {
+  .button {
+    width: 132px;
+    height: 40px;
+    
+    margin: 20px;
+    
+    
+    font-weight: 650;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .button {
+    width: 100px;
+    height: 30px;
+    
+    
+    
+    
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+@media screen and (max-width: 250px) {
+  .button {
+    width: 70px;
+    height: 20px;
+    
+    
+    
+    
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    border: 1px solid #FF0000;
+  }
+}
+
+
+
+.popupform{
+  width:400px ;
+  height:100px;
+  background-color:black;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.popup-input-field{
+
+margin: 30px;
+display: flex;
+justify-content:center;
+flex-direction: column;
+
+align-content: flex-start;
+}
+.popupInput{
+  
+
+  
+  width: 228px;
+  height: 45px;
+  
+  background: #0C0C0C;
+  border: 1px solid #333333;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  
+  /* Inside auto layout */
+  
+ margin-top: 10px;
+
+
+
+ 
+
+
+}
+.popupInput::placeholder{
+  color:#7B7D7D;
+  opacity: 0.3;
+  padding-left: 70px;
+}
+/* .popup-Cancel-Button{
+  width: 268px;
+  height: 45px;
+  
+  background: #0C0C0C;
+  border: 1px solid #333333;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  
+
+  
+  margin: 30px;
+
+
+} */
+
+
+
+
+
+.popupInput:focus{
+  background-color: #fff;
+  border-color: #3b49df;
+  box-shadow: 1px 1px 0 #3b49df;
+}
+
+
+
+
+
+
+
+
+
+
+
+.popupButton{
+  width: 104px;
+height: 50px;
+
+background: #FF0000;
+border: 3px solid #FF0000;
+border-radius: 85px;
+
+font-weight: 700;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 22px;
+
+
+
+
+color: #000000;
+
+
+}
+.popup-Cancel-Button{
+  width: 104px;
+height: 50px;
+background: #020202;
+border: 3px solid #FF0000;
+border-radius: 85px;
+font-weight: 700;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 22px;
+color:red;
+margin-left:15px;
+
+
+
+
+
+
+
+}
+
+.popupField{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+ 
+  
+
+ 
+  flex-direction:column;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+.subheaders{
+  font-size: 30px;
+ color:red;
+  font-weight: 700;
+  margin-top: 10px;
+  
+ 
+}
+.header-head{
+  position: fixed;
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 39px;
+/* identical to box height */
+
+text-transform: capitalize;
+
+/* Red */
+
+color: #FF0000;
+
+}
+.header-head.fixed {
+  position: fixed;
+
+
+
+}
+.subheader-field{
+ 
+display: flex;
+justify-content: space-around;
+}
+
+.Header-container{
+  width: 100%;
+  height: auto;
+  color: white;
+ 
+
+}
+.card-container{
+  width: 100%;
+ 
+}
+.Header-Filed{
+
+}
+
+
+
+
+    .Signup-MainContainer{
+      width: 100%;
+     
+      display: flex;
+      justify-content: center;
+  margin-top: 100px;
+  
+  
+    }
+    .signup-field{
+      width: 25%;
+      height:100%;
+      background-color: #000000;
+      border-radius: 10px;
+    box-shadow: 0 2px 2px 2px red;
+
+    }
+    .signup-input{
+      width: 300px;
+      height: 40px;
+      background-color: #fff;
+     
+      border-radius: 10px;
+     border-color: #FF0000;
+    
+    }
+    .signup-button{
+      width:300px;
+      height:40px;
+      background-color: #fff;
+    
+      margin-bottom: 40px;
+      border-radius: 10px;
+      border-color: #FF0000;
+    }
+    .signup-label{
+      font-size: 20px;
+      color: #FF0000;
+      font-weight: 600;
+
+    }
+    .setlogo{
+      width: 40%;
+      height: 200px;
+
+    }
+    .settingText{
+      background-color: #A3A4A5;
+       width: 200px;
+       border-radius: 10px;
+    }
+    /* .settingText::placeholder{
+
+    } */
+    
+    .Reactive-setting-Text{
+      background-color: #A3A4A5;
+    
+       width: 120px;
+       border-radius: 10px;
+       
+     
+    }
+    .TextField::placeholder{
+
+    }
+    
+   
+    @media screen and (max-width: 360px) {
+      .settingText{
+       
+       width: 200px;
+       border-radius: 10px;
+      }
+    }
+    .InaactivesettingText{
+      background-color: #A3A4A5;
+       width: 200px;
+       border-radius: 10px;
+      
+    }
+   
+    
+    .DelayTextField{
+      background-color: #A3A4A5;
+       width: 100px;
+       border-radius: 10px;
+     
+    }
+    /* ------------------------------------------------------------------------- */
+    .SettingHead{
+      display: flex;
+      justify-content: center;
+  
+    }
+
+    .emailIcon{
+      width: 80px;
+      height:30px;
+
+    }
+    .emailField{
+      display: flex;
+
+
+
+    }
+    .popup-box {
+      position: fixed;
+      background: #00000050;
+
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left: 0;
+    }
+     
+    .box {
+     
+      width: 13%;
+      position: relative;
+      margin: 0 auto;
+      height: 200px;
+      max-height: 70vh;
+      margin-top: calc(100vh - 85vh - 20px);
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      border: 1px solid #999;
+      overflow: auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      overflow: auto;
+
+      
+
+
+    }
+     
+    .close-icon {
+ 
+      cursor: pointer;
+    
+     
+      
+    
+     
+      
+  
+      
+
+  
+      font-size: 40px;
+    }
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    .reply-popup-head{
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 17px;
+      /* identical to box height */
+      
+      
+      
+      color: #E6E6E6;
+      
+    }
+    .popup-contant{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+     /* margin-top: 20px; */
+    }
+    .logout-icon{
+      width: 80px;
+      height: 50px;
+      color:red
+    }
+  
+   
+    .wrong-img{
+      width: 60px;
+      height: 60px;
+      background-color: #fff;
+
+    }
+    .wrong-img-setting{
+      width: 60px;
+      height: 60px;
+      background-color: #fff;
+
+    }
+    .wrong-img{
+      width: 30px;
+      height: 300px;
+      background-color: #fff;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS */
+.button-31 {
+  background-color:red;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 20px;
+  max-width: none;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width:40%;
+
+  
+
+
+}
+
+.button-31:hover,
+.button-31:focus {
+  opacity: .75;
+}
+.button-31 {
+  background-color: #222;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 20px;
+  max-width: none;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width:40%;
+}
+.BotSubmitbutton{
+  background-color: #222;
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-left: 25px;
+  max-width: none;
+ height: 44px;
+width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width:30%;
+}
+.setting-Popup-field{
+  width: 40px;
+  height: 65px;
+  
+}
+.setting-popup-Img{
+  width: 70px;
+  height: 60px;
+}
+.cross{
+  width: 15px;
+  height: 15px;
+  color: 
+  #333333;
+ margin-left: 24px;
+ margin-top: 5px;
+
+ 
+}
+.arrow-setting{
+  width: 80px;;
+  height: 60px;
+}
+
+
+
+
+.Reactive-user{
+  display: flex;
+
+}
+
+
+
+
+
+
+
+
+
