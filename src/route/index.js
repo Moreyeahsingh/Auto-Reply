@@ -63,7 +63,7 @@ const Routers = () => {
   return (
     <Router>
       <Routes>
-        {publicRoutes.map((i) => (
+        {/* {publicRoutes.map((i) => (
           <Route
             path={i?.path}
             key={i?.key}
@@ -75,7 +75,7 @@ const Routers = () => {
               />
             }
           />
-        ))}
+        ))} */}
 
         {privateRoutes.map((i) => (
           <Route

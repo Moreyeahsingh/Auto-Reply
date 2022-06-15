@@ -1,6 +1,6 @@
 export const ROUTES = {
-  INDEX: "/",
-  DASHBOARD: "/dashboard",
+  // INDEX: "/",
+  DASHBOARD: "/",
   MESSAGESET: "/messageset",
   MESSAGEREPLY: "/messagereply",
 
