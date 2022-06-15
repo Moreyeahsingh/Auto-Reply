@@ -17,7 +17,7 @@ const PrivateRoute = ({ component: Component, restricted, ...props }) => {
       <Header /> <Component {...props} />
     </>
   ) : (
-    <Navigate replace to={ROUTES.INDEX} />
+    <Navigate replace to={ROUTES.DASHBOARD} />
   );
 };
 
